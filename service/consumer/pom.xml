@@ -8,7 +8,7 @@
 		<version>1.0.0</version>
 	</parent>
 	<groupId>com.architect2coder</groupId>
-	<artifactId>sofabootdemo-service-consume</artifactId>
+	<artifactId>sofabootdemo-service-consumer</artifactId>
 	<version>1.0.0</version>
 	<name>sofabootdemo</name>
 	<description>service consume module for Sofa Boot</description>

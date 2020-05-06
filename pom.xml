@@ -49,12 +49,36 @@
 			<groupId>com.alipay.sofa</groupId>
 			<artifactId>isle-sofa-boot-starter</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.architect2coder</groupId>
+			<artifactId>sofabootdemo-boot-run</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.architect2coder</groupId>
+			<artifactId>sofabootdemo-service-facade</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.architect2coder</groupId>
+			<artifactId>sofabootdemo-service-provider</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.architect2coder</groupId>
+			<artifactId>sofabootdemo-service-consumer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<modules>
 		<module>boot/run</module>
 		<module>service/facade</module>
-		<module>service/consume</module>
+		<module>service/consumer</module>
 		<module>service/provider</module>
 	</modules>
 
