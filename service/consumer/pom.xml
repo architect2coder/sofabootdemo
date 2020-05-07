@@ -6,16 +6,22 @@
 		<groupId>com.architect2coder</groupId>
 		<artifactId>sofabootdemo</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
-	<groupId>com.architect2coder</groupId>
+
 	<artifactId>sofabootdemo-service-consumer</artifactId>
-	<version>1.0.0</version>
-	<name>sofabootdemo</name>
-	<description>service consume module for Sofa Boot</description>
 
 
 	<dependencies>
+		<dependency>
+			<groupId>com.alipay.sofa</groupId>
+			<artifactId>runtime-sofa-boot-starter</artifactId>
+		</dependency>
 
+		<dependency>
+			<groupId>com.architect2coder</groupId>
+			<artifactId>sofabootdemo-service-facade</artifactId>
+		</dependency>
 	</dependencies>
 
 

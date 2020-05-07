@@ -6,16 +6,16 @@
 		<groupId>com.architect2coder</groupId>
 		<artifactId>sofabootdemo</artifactId>
 		<version>1.0.0</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
-	<groupId>com.architect2coder</groupId>
 	<artifactId>sofabootdemo-service-facade</artifactId>
-	<version>1.0.0</version>
-	<name>sofabootdemo</name>
-	<description>service facade module for Sofa Boot</description>
 
 
 	<dependencies>
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
 	</dependencies>
 
 

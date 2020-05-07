@@ -3,6 +3,12 @@
  */
 package com.architect2coder.sofabootdemo.controller;
 
+import com.alipay.sofa.runtime.api.annotation.SofaReference;
+import com.architect2coder.sofabootdemo.model.Coder;
+import com.architect2coder.sofabootdemo.service.HumanResourceService;
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @version $Id: GatewayController.java, v 0.1 2020年04月28日 17:52 apple Exp $
  */
 @RestController
-public class GatewayController {
+public class GatewayController implements ApplicationContextAware {
+
+    private ApplicationContext context;
+
+    @SofaReference
+    private HumanResourceService humanResourceService;
 
     @RequestMapping("/")
-    public String index(){
-        return "hello,spring boot.";
+    public Coder index(){
+        return this.humanResourceService.getLoginCoder();
     }
 
     @RequestMapping(method = RequestMethod.POST,value = "/")
@@ -33,5 +44,9 @@ public class GatewayController {
     @RequestMapping(method = RequestMethod.PUT,value = "/")
     public String update(){
         return "hello,update success.";
+    }
+
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.context = applicationContext;
     }
 }
